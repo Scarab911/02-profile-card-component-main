@@ -9,6 +9,7 @@
   --clr-dark-cyan: hsl(185, 75%, 39%);
   --clr-vdd-blue: hsl(229, 23%, 23%);
   --clr-dgrayish-blue: hsl(227, 10%, 46%);
+  --clr-desaturated-dgrayish-blue: hsla(227, 10%, 46%, 0.596);
   /*neutral*/
   --clr-darkGrey: hsl(0, 0, 59%);
   /*FONTS*/
@@ -29,13 +30,30 @@ body {
   justify-content: center;
   font-family: var(--ff-kumbh);
   font-size: 18px;
-  background-image: url(./images/bg-pattern-bottom.svg);
+  background-color: var(--clr-dark-cyan);
   padding: 10px;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+body::before {
+  background-image: url(./images/bg-pattern-bottom.svg);
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  transform: rotate(30deg);
 }
 .main-container {
   max-width: 350px;
   background-color: #fff;
   position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  color: var(--clr-vdd-blue);
 }
 .topBg {
   background-image: url(./images/bg-pattern-card.svg);
@@ -56,10 +74,8 @@ body {
 .content {
   display: flex;
   flex-direction: column;
-  width: 350px;
   margin-top: 50px;
-  gap: 20px;
-  padding: 20px;
+  padding: 20px 40px;
   text-align: center;
   line-height: 1.5rem;
 }
@@ -69,16 +85,33 @@ body {
 .profile .name {
   font-weight: 700;
 }
+.profile .city {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: var(--clr-dgrayish-blue);
+}
 .name .year {
+  color: var(--clr-dgrayish-blue);
   font-weight: 400;
 }
 
 .stats {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding: 20px 60px;
+  border-top: 1px solid var(--clr-desaturated-dgrayish-blue);
   font-weight: 700;
+  text-align: center;
+}
+.count {
+  margin-left: 55px;
+}
+.stats :nth-child(1) {
+  margin-left: 0;
 }
 .dscrp {
+  margin-top: 5px;
   font-weight: 400;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
+  color: var(--clr-dgrayish-blue);
 }
