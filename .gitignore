@@ -17,3 +17,5 @@
 .prettierignore
 
 node_modules
+
+readme--fem.md
