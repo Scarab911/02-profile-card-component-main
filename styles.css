@@ -1,0 +1,84 @@
+/*FONTS*/
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* VARIABLES*/
+:root {
+  /*COLORS:*/
+  /* primary */
+  --clr-dark-cyan: hsl(185, 75%, 39%);
+  --clr-vdd-blue: hsl(229, 23%, 23%);
+  --clr-dgrayish-blue: hsl(227, 10%, 46%);
+  /*neutral*/
+  --clr-darkGrey: hsl(0, 0, 59%);
+  /*FONTS*/
+  --ff-kumbh: 'Kumbh Sans', sans-serif;
+}
+body,
+body * {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ff-kumbh);
+  font-size: 18px;
+  background-image: url(./images/bg-pattern-bottom.svg);
+  padding: 10px;
+}
+.main-container {
+  max-width: 350px;
+  background-color: #fff;
+  position: relative;
+}
+.topBg {
+  background-image: url(./images/bg-pattern-card.svg);
+  height: 140px;
+}
+.profilePhoto {
+  height: 100px;
+  width: 100px;
+  background-image: url(./images/image-victor.jpg);
+  border-radius: 50%;
+  border: 5px solid #fff;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  top: 90px;
+  left: calc(50% - 50px);
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  margin-top: 50px;
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
+  line-height: 1.5rem;
+}
+.profile {
+  font-weight: 400;
+}
+.profile .name {
+  font-weight: 700;
+}
+.name .year {
+  font-weight: 400;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+.dscrp {
+  font-weight: 400;
+  font-size: 0.6rem;
+}
