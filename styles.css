@@ -25,7 +25,7 @@ body * {
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
   font-family: var(--ff-kumbh);
@@ -48,12 +48,14 @@ body::before {
   transform: rotate(30deg);
 }
 .main-container {
-  max-width: 350px;
+  width: 350px;
   background-color: #fff;
   position: relative;
   border-radius: 15px;
   overflow: hidden;
   color: var(--clr-vdd-blue);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 .topBg {
   background-image: url(./images/bg-pattern-card.svg);
@@ -98,20 +100,27 @@ body::before {
 .stats {
   display: flex;
   justify-content: space-around;
-  padding: 20px 60px;
+  padding: 20px 40px;
+  gap: 10px;
   border-top: 1px solid var(--clr-desaturated-dgrayish-blue);
   font-weight: 700;
   text-align: center;
 }
-.count {
-  margin-left: 55px;
-}
-.stats :nth-child(1) {
-  margin-left: 0;
+
+.stats :nth-child(2) {
+  margin-right: 19px;
 }
 .dscrp {
   margin-top: 5px;
   font-weight: 400;
   font-size: 0.7rem;
   color: var(--clr-dgrayish-blue);
+  letter-spacing: 1px;
+}
+/*MEDIA QUERIES*/
+
+@media (max-width: 320px) {
+  .main-container {
+    max-width: 100%;
+  }
 }
